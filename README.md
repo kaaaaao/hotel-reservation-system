@@ -11,7 +11,7 @@
 
 ## スクリーンショット
 <img src="https://github.com/pngdr/hotel-reservation-system/assets/107669748/fa576fd5-f287-4324-b820-212511b07a08" width="900px">
-<img src="https://github.com/Taeji46/Timetable-with-SwiftData/assets/107469797/835053d7-2ecb-4e7c-b85f-7cc7089bea8f" width="200px">
+<img src="https://github.com/pngdr/hotel-reservation-system/assets/107669748/a52498d9-1fcc-4619-8f22-3bbd5b9c93ee" width="900px">
 <img src="https://github.com/Taeji46/Timetable-with-SwiftData/assets/107469797/e510aab0-d551-40d8-bf2b-e3931735afdb" width="200px">  
 
 ## 動作環境
