@@ -1,0 +1,15 @@
+
+<p style="color: green"><%= notice %></p>
+
+<p><%= link_to "Top", bookings_path %>　/　<%= link_to "Mypage", users_path %>　/　Booking_datail</p>
+<%= render @booking %>
+
+<div>
+  <%= link_to ">　Edit this booking", edit_booking_path(@booking) %>
+	<br><br>
+	<%= button_to "Delete this booking", @booking, { method: :delete, form: { data: { turbo_confirm: "本当に削除しますか？" } }, method: :get, class: "btn_03"} %>
+
+
+</div>
+
+

@@ -1,0 +1,72 @@
+<p style="color: green"><%= notice %></p>
+
+<div class = "mypage">
+<p><%= link_to "Top", bookings_path %>　/　Mypage</p>
+</div>
+
+<div class = "new_booking_button">
+			<%= link_to ">　New booking", new_booking_path %>
+</div>
+
+<h1 class = "toppage_h1">　Your booking</h1>
+<table class = "booking_list">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Room</th>
+      <th>Plan</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <% @bookings.each do |booking| %>
+	<% if((User.find(session[:user_id]).loginname) ==  booking.reserve_name )%>
+      <tr>
+        <td><%= booking.start_time %></td>
+        <td><%= booking.reserve_name %></td>
+        <td><%= booking.room_type %></td>
+        <td><%= booking.plan %></td>
+		<td><%= link_to "> detail", booking %></td>
+		
+      </tr>
+	 <% end %>
+    <% end %>
+  </tbody>
+</table>	
+
+<br><br>
+<h1 class = "toppage_h1">　Your information</h1>
+
+  <% @users.each do |user| %>
+  <div class = "user_information">
+	<% if((User.find(session[:user_id]).loginname) ==  user.loginname )%>
+    <p>
+		<strong>Loginname:</strong>
+		<%= user.loginname %>
+	</p>
+
+	<p>
+		<strong>Name:</strong>
+		<%= user.name %>
+	</p>
+
+	<p>
+		<strong>Email:</strong>
+		<%= user.email %>
+	</p>
+	
+	
+	
+	<p>
+		<strong>Password:</strong>
+		<%= "****" %>
+	</p>
+	<%= link_to "> detail", user %>
+	</div>
+	<% end %>
+   <% end %>
+	
+	
+</div>
+

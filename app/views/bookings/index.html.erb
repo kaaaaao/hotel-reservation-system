@@ -1,0 +1,102 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1 class = "toppage_h1">　Introduce</h1>
+
+<div class = "introduce">
+	<img src="/assets/hotel.png" alt="" class = "hotelimg">
+	<ul class = "introduce_ul">
+		<li>オープン日 : 2023/5/1</li>
+		<li>サーバー名 : Kaoeri.aternos.me</li>
+		<li>住所 : ウミベ</li>
+		<li>座標 : x110 y11 z60</li>
+		<li>気候 : 草原</li>
+		<br><br>
+		<div class = "new_booking_button">
+			<%= link_to ">　Go to mypage", users_path %>
+		</div>
+	</ul>
+</div>
+
+
+
+<br><br><br>
+<h1 class = "toppage_h1">　Room Type</h1>
+<div class = "introduce">
+	<div class="room">
+        <div class="room_tape"> </div>
+        <p class="room_title">Single</p>
+        <img src="/assets/single.png" alt="" class = "room_img">
+		<span class="description_bottom">
+			<ul>
+				<li>シティビュー</li>
+				<li>チェスト1個</li>
+			</ul>
+		</span>
+    </div>
+	
+	<div class="room">
+        <div class="room_tape"> </div>
+        <p class="room_title">Twin</p>
+        <img src="/assets/twin.png" alt="" class = "room_img">
+		<span class="description_bottom">
+			<ul>
+				<li>オーシャンビュー</li>
+				<li>チェスト2個</li>
+			</ul>
+		</span>
+    </div>
+	
+	<div class="room">
+        <div class="room_tape"> </div>
+        <p class="room_title">Double</p>
+        <img src="/assets/double.png" alt="" class = "room_img">
+		<span class="description_bottom">
+			<ul>
+				<li>オーシャンビュー</li>
+				<li>チェスト2個</li>
+			</ul>
+		</span>
+    </div>
+</div>
+
+
+
+
+
+<br><br><br>
+<h1 class = "toppage_h1">　Plan</h1>
+<ul>
+		<li>economy : 素泊まり</li>
+		<li>normal : 朝食付き</li>
+		<li>special : 朝食・夕食付き</li>
+</ul>
+
+
+
+
+<br><br><br>
+<h1 class = "toppage_h1">　Latest booking</h1>
+<div id="bookings">
+  
+  <%= month_calendar events: @bookings do |date, bookings| %>
+  <%= date.day %>
+
+    <% bookings.each do |booking|%>
+    
+	<% if((User.find(session[:user_id]).loginname) ==  booking.reserve_name )%>
+      <div class = "your">
+        <%= booking.reserve_name %> (<%= booking.room_type %>)
+      </div>
+	  
+	<% else %>
+		<div>
+			<%= booking.reserve_name %> (<%= booking.room_type %>)
+		</div>	
+    <% end %> 
+	<% end %>
+  <% end %>
+    
+
+</div>
+</div>

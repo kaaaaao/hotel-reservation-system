@@ -1,0 +1,11 @@
+
+
+<p style="color: green"><%= notice %></p>
+<p><%= link_to "Top", bookings_path %>　/　<%= link_to "Mypage", users_path %>　/　User_datail</p>
+<%= render @user %>
+
+<div>
+  <%= link_to ">　Edit this user", edit_user_path(@user) %>
+	<br><br>
+  <%= button_to "Delete this user", @user, { method: :delete, form: { data: { turbo_confirm: "本当に削除しますか？" } }, method: :get, class: "btn_03" } %>
+</div>

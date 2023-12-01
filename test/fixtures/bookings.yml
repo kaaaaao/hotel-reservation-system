@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve_name: MyString
+  reserve_date: 2023-07-03
+  room_type: MyString
+  plan: MyString
+
+two:
+  reserve_name: MyString
+  reserve_date: 2023-07-03
+  room_type: MyString
+  plan: MyString

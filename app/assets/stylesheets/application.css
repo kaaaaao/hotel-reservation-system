@@ -1,0 +1,373 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require simple_calendar
+ */
+
+.contens{
+	text-align: center;
+	font-family: serif;
+ }
+
+
+
+body{
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	font-family: serif;
+}
+
+
+
+h1{
+	font-family: serif;
+	font-weight: bold;
+}
+
+title{
+	font-family: serif;
+	font-weight: bold;
+}
+
+.back{
+	text-align: center;
+	font-family: serif;
+}
+
+a{
+	text-decoration: none;
+	font-family: serif;
+	color: #00ABB3;
+
+}
+
+p{
+	font-family: serif;
+}
+
+
+header{
+    background-color: #3C4048;
+    top: 0;
+    display: flex;
+	position: sticky; 
+	padding-left: 5%;
+	padding-right: 5%;
+	color: white;
+	z-index: 1;
+} 
+
+.kaoeri{
+	margin-right: 40%;
+}
+
+.item{
+	text-align: right;
+	margin-left: 65%;
+}
+
+
+
+.flex-container{
+	padding: 10%;
+	padding-top: 1%;
+}
+
+.new{
+	text-align: center;
+}
+
+
+.introduce{
+	display: flex;
+}
+
+.introduce_ul{
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.new_booking_button a{
+	position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.new_booking_button a:before{
+	position: absolute;
+    bottom: 0px;
+    left: 50%;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgba(0,0,0,.1);
+    transform: translateX(-50%);
+}
+
+.new_booking_button a:after{
+	position: absolute;
+    bottom: 0px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.new_booking_button a:hover{
+	opacity: 0.7;
+}
+
+.new_booking_button a:hover:after{
+	transform: scale(1, 1);
+}
+
+.toppage_h1{
+	border-left: double 7px #3C4048
+}
+
+.room {
+    width: 30%;/* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 2em 2em;
+    background: #EAEAEA;/* 紙の色 */
+    color: #000;/* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);
+    word-break: break-all;
+	position: relative;
+}
+
+.room p {
+     margin: 0; 
+     padding: 0;
+     font-size: 0.9em;
+}
+
+.room_tape {
+     width: 50%;
+     height: 35px;
+     margin: -25px auto 0;
+     background: #3C4048;
+     transform: rotate(-3deg);
+     opacity: 0.3;
+}
+
+.room_title {
+     text-align: center;
+     font-size: 1.3em!important;
+     margin-top: 10px!important;
+}
+
+.room:hover{
+    background-color: #B2B2B2;
+	color: white;
+}
+
+.room_img{
+	width: 100%;
+    height: auto;
+}
+
+li{
+	list-style-type: square;
+}
+
+.midasi{
+	border-left: 10px #3C4048
+}
+
+.booking_list{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.booking_list tr{
+  border-bottom: solid 1px #eee;
+}
+
+.booking_list td{
+	text-align: center;
+}
+
+.mypage{
+	display: flex;
+}
+
+.user_information{
+	margin-left: 1%;
+}
+
+.c-form-text {
+    height: 2.4em;
+    width: 25%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.c-form-text:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #00ABB3 inset;
+}
+
+.c-form-text-2 {
+    height: 2.4em;
+    width: 18%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.c-form-text-2:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #00ABB3 inset;
+}
+
+.btn_02 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1%;
+	font-weight: bold;
+	border: 2px solid #00ABB3;
+	background: #00ABB3;
+	color: #fff;
+	transition: 0.5s;
+	font-family: serif;
+}
+.btn_02:hover {
+	color: #00ABB3;
+	background: #fff;
+}
+
+.btn_02:active {
+	-webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+	}
+	
+.btn_03 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 16%;
+	padding: 1%;
+	font-weight: bold;
+	border: 2px solid #D3756B;
+	background: #D3756B;
+	color: #fff;
+	transition: 0.5s;
+	font-family: serif;
+}
+.btn_03:hover {
+	color: #D3756B;
+	background: #fff;
+}
+
+.btn_03:active {
+	-webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.btn_04 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 50%;
+	padding: 1%;
+	margin-top: 0;
+	font-weight: bold;
+	border: 2px solid #00ABB3;
+	background: #00ABB3;
+	color: #fff;
+	transition: 0.3s;
+	font-family: serif;
+	
+}
+.btn_04:hover {
+	color: #00ABB3;
+	background: #fff;
+}
+
+.btn_04:active {
+	-webkit-transform: translate(0,2px);
+	-moz-transform: translate(0,2px);
+	transform: translate(0,2px);
+	border-bottom:none;
+}
+
+.hotelimg{
+	width: 60%;
+}
+
+
+
+ 
+.description_bottom { /* ツールチップのスタイル */
+  width: 150px; /* 横幅 */
+  position: absolute;
+  top: 80%; /* Y軸の位置 */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px; /* テキストとの距離 */
+  padding: 8px;
+  border-radius: 10px; /* 角の丸み */
+  background-color: #00ABB3;
+  font-size: 0.8em;
+  color: #fff;
+  visibility: hidden; /* ツールチップを非表示に */
+  opacity: 0; /* 不透明度を0％に */
+  z-index: 1;
+  transition: 0.5s all; /* マウスオーバー時のアニメーション速度 */
+}
+ 
+.room:hover .description_bottom { /* マウスオーバー時のスタイル */
+  top: 100%; /* Y軸の位置 */
+  visibility: visible; /* ツールチップを表示 */
+  opacity: 1; /* 不透明度を100％に */
+}
+
+.your{
+	color: #00ABB3;
+	font-weight: bold;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hotel</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  
+  <header>
+        <div class = "title"><h1>Booking hotel</h1></div>
+        <nav class = "item">
+		
+		
+            <% if session[:user_id]%>
+		<p> <%= User.find(session[:user_id]).loginname %>さんようこそ </p>
+		<%= button_to "Logout", logout_path, method: :delete, class: "btn_04" %>
+		
+		<% end %>
+        </nav>
+    </header>
+
+  
+  <body>
+  <div class = "flex-container">
+    
+    <%= yield %>
+  </div>
+  </body>
+  
+</html>
+
+
+
