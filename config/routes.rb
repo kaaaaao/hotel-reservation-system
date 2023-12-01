@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # get 'sessions/create'
   # get 'sessions/destroy'
 
-  root 'users#index'
-  
+  # root 'users#index'
+
   resources :bookings
   resources :reservations
   resources :users
