@@ -15,9 +15,21 @@
 <img src="https://github.com/pngdr/hotel-reservation-system/assets/107669748/773398ea-ecf4-4dd8-abd0-2042b9974895" width="900px">  
 
 ## 動作環境
-iOS 17.0 以上
+・Ruby 3.2.2  
+・SQLite3  
 
-## 開発環境
-Xcode 15    
-SwiftUI  
-SwiftData 
+## 環境構築手順
+1. Rubyのインストール
+   [RubyInstaller](https://rubyinstaller.org/downloads/)にアクセスして「=> Ruby+Devkit 3.0.4-1 (x64)」という文字をクリックするとダウンロードがはじまります。
+
+2. SQLite3のインストール
+   [SQLite3Installer](https://sqlite.org/index.html)にアクセスして「Precompiled Binaries for Windows」「Precompiled Binaries for Windows」をダウンロードし、ダウンロードしたフォルダの中にある「sqlite3.dll」「sqlite3.exe」を「C:¥Ruby32-x64¥bin」にコピーします。
+
+3. Ruby on Railsのインストール
+   コマンドプロンプトで「gem install rails -v 7.0.3」のコマンドを実行します。
+
+4. ローカルでRailsサーバーを立てる
+   「hotel-reservation-system」ディレクトリまで移動し、「rails s」のコマンドでRailsサーバーを立ち上げます。
+
+5. サーバーにアクセスする
+   「localhost:3000/login」のURLをブラウザで開きます。
